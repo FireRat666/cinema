@@ -67,7 +67,7 @@ function enableTheFireScreen() {
 	firescreen.setAttribute("announce-four-twenty", "false");
 	firescreen.setAttribute("announce-events", "true");
 	firescreen.setAttribute("volume", "0.5");
-	firescreen.setAttribute("button-position", "0 -10 0");
+	firescreen.setAttribute("button-position", "-1.8 17.9 1.7");
 	firescreen.setAttribute("website", websiteurl);
 	firescreen.setAttribute("src", "https://firer.at/scripts/firescreen.js");
 	document.querySelector("a-scene").appendChild(firescreen);
