@@ -10,9 +10,9 @@ let youtubePlaylist = `PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ`;
 BS.BanterScene.GetInstance().On("loaded", () => {
 	console.log("Scene loaded");
 	/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
-		// enableYouTube();
+		 enableYouTube();
 	/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-		 enableTheFireScreen();
+		// enableTheFireScreen();
 });
 
 // videoplayer toggle by HBR.& Fire Thank you HBR!
