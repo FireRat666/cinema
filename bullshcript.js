@@ -81,14 +81,15 @@ function enableThePortableFireScreen() {
 	console.log("Adding Screen Cast");
 	const firescreen = document.createElement("script");
 	firescreen.id = "3dcinema-portable-firescreen";
-	firescreen.setAttribute("scale", "1 1 1");
-	firescreen.setAttribute("rotation", "0 0 0");
-	firescreen.setAttribute("position", "0 5 0");
+	firescreen.setAttribute("scale", "0.7 0.7 1");
+	firescreen.setAttribute("rotation", "0 180 0");
+	firescreen.setAttribute("position", "-18.4 1.269 0.75");
 	firescreen.setAttribute("mipmaps", "0");
 	firescreen.setAttribute("pixelsperunit", "1200");
 	firescreen.setAttribute("width", "1280");
 	firescreen.setAttribute("height", "720");
 	firescreen.setAttribute("announce", "false");
+	firescreen.setAttribute("disable-rotation", "true");
 	firescreen.setAttribute("volume", "0.5");
 	firescreen.setAttribute("custom-button01-url", "false");
 	firescreen.setAttribute("website", otherwebsiteurl);
