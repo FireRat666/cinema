@@ -4,9 +4,9 @@
 
 /* Screencast - https://screen.sdq.st:8443/?room=3dcinema */
 /* YouTube Live - https://www.youtube.com/embed/EF0-j9ORe2Y?autoplay=1&controls=0 */
-let websiteurl = "https://screen.sdq.st:8443/?room=3dcinema"; /* ?autoplay=1&controls=0 For YouTube Live */
-let otherwebsiteurl = "https://firer.at";
 let youtubePlaylist = `PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ`;
+let websiteurl = "https://screen.sdq.st:8443/?room=3dcinema"; /* ?autoplay=1&controls=0 For YouTube Live */
+let otherwebsiteurl = "https://firer.at/pages/games.html";
 
 BS.BanterScene.GetInstance().On("loaded", () => {
 	console.log("Scene loaded");
@@ -68,7 +68,7 @@ function enableTheFireScreen() {
 	firescreen.setAttribute("hand-controls", "true");
 	firescreen.setAttribute("announce", "false");
 	firescreen.setAttribute("announce-four-twenty", "false");
-	firescreen.setAttribute("announce-events", "true");
+	firescreen.setAttribute("announce-events", "false");
 	firescreen.setAttribute("volume", "0.5");
 	firescreen.setAttribute("button-position", "-1.8 17.9 1.7");
 	firescreen.setAttribute("website", websiteurl);
@@ -97,8 +97,10 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("pixelsperunit", "1200");
 	firescreen.setAttribute("width", "1280");
 	firescreen.setAttribute("height", "720");
-	firescreen.setAttribute("announce", "false");
+	firescreen.setAttribute("announce", "true");
+	firescreen.setAttribute("announce-events", "true");
 	firescreen.setAttribute("volume", "0.5");
+   	firescreen.setAttribute("backdrop", "true");
 	firescreen.setAttribute("custom-button01-url", "https://jackbox.tv");
 	firescreen.setAttribute("custom-button01-text", "Jackbox.tv");
 	firescreen.setAttribute("custom-button02-url", "https://papas.tv");
