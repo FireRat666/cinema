@@ -97,7 +97,6 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("width", "1280");
 	firescreen.setAttribute("height", "720");
 	firescreen.setAttribute("announce", "false");
-	firescreen.setAttribute("disable-rotation", "true");
 	firescreen.setAttribute("volume", "0.5");
 	firescreen.setAttribute("custom-button01-url", "https://jackbox.tv");
 	firescreen.setAttribute("custom-button01-text", "Jackbox.tv");
