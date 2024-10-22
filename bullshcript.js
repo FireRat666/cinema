@@ -5,6 +5,7 @@
 /* Screencast - https://screen.sdq.st:8443/?room=3dcinema */
 /* YouTube Live - https://www.youtube.com/embed/EF0-j9ORe2Y?autoplay=1&controls=0 */
 let websiteurl = "https://screen.sdq.st:8443/?room=3dcinema"; /* ?autoplay=1&controls=0 For YouTube Live */
+let otherwebsiteurl = "https://firer.at";
 let youtubePlaylist = `PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ`;
 
 BS.BanterScene.GetInstance().On("loaded", () => {
@@ -13,6 +14,7 @@ BS.BanterScene.GetInstance().On("loaded", () => {
 		 enableYouTube();
 	/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 		// enableTheFireScreen();
+		enableThePortableFireScreen()
 });
 
 // videoplayer toggle by HBR.& Fire Thank you HBR!
@@ -22,7 +24,7 @@ let ytplayerdisabled = true;
     console.log("YouTube player Loading");
     const videoplayer = document.createElement("script");
 		videoplayer.id = "3dcinema-videoplayer";
-		videoplayer.setAttribute("scale", "3 3 3");
+		videoplayer.setAttribute("scale", "1 1 1");
 		videoplayer.setAttribute("mip-maps", "0");
 		videoplayer.setAttribute("rotation", "0 0 0");
 		videoplayer.setAttribute("position", "0.002 -5 0");
@@ -30,7 +32,7 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("button-position", "-18.4 1.45 -1.45");
 		videoplayer.setAttribute("volume", "3");
 		videoplayer.setAttribute("button-rotation", "0 0 0");
-		videoplayer.setAttribute("button-scale", "0.4 0.4 0.4");
+		videoplayer.setAttribute("button-scale", "1 1 1");
 		videoplayer.setAttribute("spatial-min-distance", "1");
 		videoplayer.setAttribute("spatial-max-distance", "1000");
 		videoplayer.setAttribute("playlist", youtubePlaylist);
@@ -70,6 +72,27 @@ function enableTheFireScreen() {
 	firescreen.setAttribute("button-position", "-1.8 17.9 1.7");
 	firescreen.setAttribute("website", websiteurl);
 	firescreen.setAttribute("src", "https://firer.at/scripts/firescreen.js");
+	document.querySelector("a-scene").appendChild(firescreen);
+  }
+
+let screenPortableDisabled = true;
+function enableThePortableFireScreen() {
+  if (screenPortableDisabled){ screenPortableDisabled = false;
+	console.log("Adding Screen Cast");
+	const firescreen = document.createElement("script");
+	firescreen.id = "3dcinema-portable-firescreen";
+	firescreen.setAttribute("scale", "1 1 1");
+	firescreen.setAttribute("rotation", "0 0 0");
+	firescreen.setAttribute("position", "0 5 0");
+	firescreen.setAttribute("mipmaps", "0");
+	firescreen.setAttribute("pixelsperunit", "1200");
+	firescreen.setAttribute("width", "1280");
+	firescreen.setAttribute("height", "720");
+	firescreen.setAttribute("announce", "false");
+	firescreen.setAttribute("volume", "0.5");
+	firescreen.setAttribute("custom-button01-url", "false");
+	firescreen.setAttribute("website", otherwebsiteurl);
+	firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 	document.querySelector("a-scene").appendChild(firescreen);
   }
   // setTimeout(() => { 
