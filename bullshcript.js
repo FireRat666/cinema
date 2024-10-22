@@ -101,6 +101,10 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("volume", "0.5");
 	firescreen.setAttribute("custom-button01-url", "https://jackbox.tv");
 	firescreen.setAttribute("custom-button01-text", "Jackbox.tv");
+	firescreen.setAttribute("custom-button02-url", "https://jackbox.tv");
+	firescreen.setAttribute("custom-button02-text", "Jackbox.tv");
+	firescreen.setAttribute("custom-button03-url", "https://jackbox.tv");
+	firescreen.setAttribute("custom-button03-text", "Jackbox.tv");
 	firescreen.setAttribute("website", otherwebsiteurl);
 	firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 	document.querySelector("a-scene").appendChild(firescreen);
