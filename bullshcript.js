@@ -90,7 +90,7 @@ function enableThePortableFireScreen() {
 	const firescreen = document.createElement("script");
 	firescreen.id = "3dcinema-portable-firescreen";
 	firescreen.setAttribute("scale", "0.7 0.7 1");
-	firescreen.setAttribute("rotation", "0 180 0");
+	firescreen.setAttribute("rotation", "0 0 0");
 	firescreen.setAttribute("position", "-16.45 1.269 0.75");
 	firescreen.setAttribute("mipmaps", "0");
 	firescreen.setAttribute("pixelsperunit", "1200");
