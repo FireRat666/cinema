@@ -22,7 +22,7 @@ let ytplayerdisabled = true;
     console.log("YouTube player Loading");
     const videoplayer = document.createElement("script");
 		videoplayer.id = "3dcinema-videoplayer";
-		videoplayer.setAttribute("scale", "1 1 1");
+		videoplayer.setAttribute("scale", "3 3 3");
 		videoplayer.setAttribute("mip-maps", "0");
 		videoplayer.setAttribute("rotation", "0 0 0");
 		videoplayer.setAttribute("position", "0.002 -5 0");
