@@ -85,6 +85,7 @@ function enableTheFireScreen() {
 let screenPortableDisabled = true;
 function enableThePortableFireScreen() {
   if (screenPortableDisabled){ screenPortableDisabled = false;
+   setTimeout(() => { 
 	console.log("Adding Screen Cast");
 	const firescreen = document.createElement("script");
 	firescreen.id = "3dcinema-portable-firescreen";
@@ -103,6 +104,8 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("website", otherwebsiteurl);
 	firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 	document.querySelector("a-scene").appendChild(firescreen);
+   }, 5000); 
   }
     console.log("Screen Stuff enabled");
+
 }
