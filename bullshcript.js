@@ -1,10 +1,8 @@
 /* YouTube Playlists
-Light Shows and Music PLZWiw-xxQ4SNl-dmJhSk6xSnGuALdCZGf
-Night at Cannabanter PLZWiw-xxQ4SOvb8f0nA4_QbGl2hAQuoGR
-Tech House Mix PLzgofGqYK8u47wzvoIz1MWBdOe6ow4R12
+3D Videos PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ
 */
 
-/* Screencast - https://screen.sdq.st:8443/?room=cannabanter */
+/* Screencast - https://screen.sdq.st:8443/?room=3dcinema */
 /* YouTube Live - https://www.youtube.com/embed/EF0-j9ORe2Y?autoplay=1&controls=0 */
 let websiteurl = "https://screen.sdq.st:8443/?room=3dcinema"; /* ?autoplay=1&controls=0 For YouTube Live */
 let youtubePlaylist = `PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ`;
@@ -23,7 +21,7 @@ let ytplayerdisabled = true;
   if (ytplayerdisabled){ ytplayerdisabled = false;
     console.log("YouTube player Loading");
     const videoplayer = document.createElement("script");
-		videoplayer.id = "cannabanter-videoplayer";
+		videoplayer.id = "3dcinema-videoplayer";
 		videoplayer.setAttribute("scale", "1 1 1");
 		videoplayer.setAttribute("mip-maps", "0");
 		videoplayer.setAttribute("rotation", "0 0 0");
@@ -54,7 +52,7 @@ function enableTheFireScreen() {
   if (screenDisabled){ screenDisabled = false;
 	console.log("Adding Screen Cast");
 	const firescreen = document.createElement("script");
-	firescreen.id = "cannabanter-firescreen";
+	firescreen.id = "3dcinema-firescreen";
 	firescreen.setAttribute("scale", "0.515 0.515 1");
 	firescreen.setAttribute("rotation", "0 0 0");
 	firescreen.setAttribute("position", "0.002 -5 0");
