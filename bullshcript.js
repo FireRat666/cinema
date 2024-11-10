@@ -87,7 +87,7 @@ let screenPortableDisabled = true;
 function enableThePortableFireScreen() {
   if (screenPortableDisabled){ screenPortableDisabled = false;
    setTimeout(() => { 
-	console.log("Adding Screen Cast");
+	console.log("Adding Fire Tablet");
 	const firescreen = document.createElement("script");
 	firescreen.id = "3dcinema-portable-firescreen";
 	firescreen.setAttribute("scale", "0.7 0.7 1");
