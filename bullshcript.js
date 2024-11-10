@@ -22,7 +22,7 @@ BS.BanterScene.GetInstance().On("loaded", () => {
 let ytplayerdisabled = true;
   function enableYouTube() {
   if (ytplayerdisabled){ ytplayerdisabled = false;
-    console.log("YouTube player Loading");
+    console.log("YouTube Player Loading");
     const videoplayer = document.createElement("script");
 		videoplayer.id = "3dcinema-videoplayer";
 		videoplayer.setAttribute("scale", "1 1 1");
@@ -112,6 +112,6 @@ function enableThePortableFireScreen() {
 	document.querySelector("a-scene").appendChild(firescreen);
    }, 5000); 
   }
-    console.log("Screen Stuff enabled");
+    console.log("Fire Tablet enabled");
 
 }
