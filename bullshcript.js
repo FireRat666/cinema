@@ -3,10 +3,10 @@
 */
 
 /* Screencast - https://screen.sdq.st:8443/?room=3dcinema */
-/* Old Screencast - https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=32323232 */
+/* Old Screencast - https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=42424242 */
 /* YouTube Live - https://www.youtube.com/embed/EF0-j9ORe2Y?autoplay=1&controls=0 */
 let youtubePlaylist = `PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ`;
-let websiteurl = "https://screen.sdq.st:8443/?room=3dcinema"; /* ?autoplay=1&controls=0 For YouTube Live */ 
+let websiteurl = "https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=42424242"; /* ?autoplay=1&controls=0 For YouTube Live */ 
 let otherwebsiteurl = "https://firer.at/pages/games.html";
 
 BS.BanterScene.GetInstance().On("loaded", () => {
