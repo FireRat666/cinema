@@ -106,8 +106,10 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("custom-button01-text", "Jackbox.tv");
 	firescreen.setAttribute("custom-button02-url", "https://papas.tv");
 	firescreen.setAttribute("custom-button02-text", "Papas.tv");
-	firescreen.setAttribute("custom-button03-url", "https://firer.at/pages/scuffeduno.html");
-	firescreen.setAttribute("custom-button03-text", "ScuffedUNO");
+	firescreen.setAttribute("custom-button03-url", "https://songpop-party.com/join");
+	firescreen.setAttribute("custom-button03-text", "SongPop Party");	   
+	firescreen.setAttribute("custom-button04-url", "https://firer.at/pages/scuffeduno.html");
+	firescreen.setAttribute("custom-button04-text", "ScuffedUNO");
 	firescreen.setAttribute("website", otherwebsiteurl);
 	firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 	document.querySelector("a-scene").appendChild(firescreen);
