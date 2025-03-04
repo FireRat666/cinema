@@ -78,7 +78,7 @@ function enableTheFireScreen() {
 		firescreen.setAttribute("volume", "0.2");
 		firescreen.setAttribute("width", "1920");
 		firescreen.setAttribute("height", "1080");
-		firescreen.setAttribute("screen-position", "0 0 0");
+		firescreen.setAttribute("screen-position", "-75.38727 10.01712 40.73122");
 		firescreen.setAttribute("website", websiteurl);
 		firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 		document.querySelector("a-scene").appendChild(firescreen);
@@ -115,6 +115,7 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("announce-events", "true");
 	firescreen.setAttribute("volume", "0.5");
    	firescreen.setAttribute("backdrop", "true");
+	firescreen.setAttribute("hand-controls", "true");
 	firescreen.setAttribute("custom-button01-url", "https://jackbox.tv");
 	firescreen.setAttribute("custom-button01-text", "Jackbox.tv");
 	firescreen.setAttribute("custom-button02-url", "https://papas.tv");
