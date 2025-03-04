@@ -70,7 +70,7 @@ function enableTheFireScreen() {
 	firescreen.setAttribute("announce", "false");
 	firescreen.setAttribute("announce-four-twenty", "false");
 	firescreen.setAttribute("announce-events", "false");
-	firescreen.setAttribute("volume", "0.25");
+	firescreen.setAttribute("volume", "0.5");
 	firescreen.setAttribute("button-position", "-1.8 17.9 1.7");
 	firescreen.setAttribute("website", websiteurl);
 	firescreen.setAttribute("src", "https://firer.at/scripts/firescreen.js");
@@ -100,7 +100,7 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("height", "720");
 	firescreen.setAttribute("announce", "true");
 	firescreen.setAttribute("announce-events", "true");
-	firescreen.setAttribute("volume", "0.25");
+	firescreen.setAttribute("volume", "0.5");
    	firescreen.setAttribute("backdrop", "true");
 	firescreen.setAttribute("custom-button01-url", "https://jackbox.tv");
 	firescreen.setAttribute("custom-button01-text", "Jackbox.tv");
