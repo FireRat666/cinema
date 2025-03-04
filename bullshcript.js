@@ -16,7 +16,7 @@ BS.BanterScene.GetInstance().On("loaded", () => {
 	/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 		 enableTheFireScreen();
 	/* UNCOMMENTED THIS TO ENABLE FIRE TABLET */
-		 enableThePortableFireScreen()
+		 enableThePortableFireScreen();
 });
 
 // videoplayer toggle by HBR.& Fire Thank you HBR!
