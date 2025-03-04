@@ -60,7 +60,7 @@ function enableTheFireScreen() {
 	firescreen.id = "3dcinema-firescreen";
 	firescreen.setAttribute("scale", "0.515 0.515 1");
 	firescreen.setAttribute("rotation", "0 0 0");
-	firescreen.setAttribute("position", "1.8 -22.9 -1.7");
+	firescreen.setAttribute("position", "0.002 -5 0");
 	firescreen.setAttribute("mipmaps", "0");
 	firescreen.setAttribute("pixelsperunit", "1200");
 	firescreen.setAttribute("width", "1920");
