@@ -64,7 +64,7 @@ function enableTheFireScreen() {
 		firescreen.setAttribute("rotation", "0 0 0");
 		firescreen.setAttribute("screen-rotation", "0 0 0");
 		firescreen.setAttribute("screen-scale", "0.515 0.515 1");
-		firescreen.setAttribute("position", "-1.8 17.9 1.7");
+		firescreen.setAttribute("position", "0 -5 0");
 		firescreen.setAttribute("lock-position", "true");
 		firescreen.setAttribute("mipmaps", "0");
 		firescreen.setAttribute("pixelsperunit", "1600");
