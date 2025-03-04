@@ -11,7 +11,7 @@ let otherwebsiteurl = "https://firer.at/pages/games.html";
 
 BS.BanterScene.GetInstance().On("loaded", () => {
 	console.log("Scene loaded");
-	/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
+	/* UNCOMMENTED THIS TO ENABLE THE YOUTUBE PLAYER */
 		//  enableYouTube();
 	/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 		 enableTheFireScreen();
@@ -19,7 +19,7 @@ BS.BanterScene.GetInstance().On("loaded", () => {
 		 enableThePortableFireScreen();
 });
 
-// videoplayer toggle by HBR.& Fire Thank you HBR!
+// videoplayer toggle by HBR & FireRat
 let ytplayerdisabled = true;
   function enableYouTube() {
   if (ytplayerdisabled){ ytplayerdisabled = false;
