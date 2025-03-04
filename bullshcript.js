@@ -74,7 +74,7 @@ function enableTheFireScreen() {
 	firescreen.setAttribute("volume", "0.5");
 	firescreen.setAttribute("button-position", "-1.8 17.9 1.7");
 	firescreen.setAttribute("website", websiteurl);
-	firescreen.setAttribute("src", "https://firer.at/scripts/firescreen.js");
+	firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 	document.querySelector("a-scene").appendChild(firescreen);
   }
   // setTimeout(() => { 
