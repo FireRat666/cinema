@@ -111,7 +111,7 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("pixelsperunit", "1200");
 	firescreen.setAttribute("width", "1280");
 	firescreen.setAttribute("height", "720");
-	firescreen.setAttribute("announce", "true");
+	firescreen.setAttribute("announce", "false");
 	firescreen.setAttribute("announce-events", "true");
 	firescreen.setAttribute("volume", "0.5");
    	firescreen.setAttribute("backdrop", "true");
