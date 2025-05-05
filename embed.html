@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <style> 
-    body {
-      margin: 0; /* Remove default body margin */
-      overflow: hidden; /* Hide scrollbars if iframe fits perfectly */
-      height: 100vh; /* Make body take full viewport height */
-    }
-    iframe {
-      border: none; /* Remove iframe border */
-      display: block; /* Ensure iframe behaves like a block element */
-      /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); Add a subtle shadow for depth */
-      /* border-radius: 10px; Rounded corners for a modern look */
-      overflow: hidden; /* Hide horizontal overflow */
-      background-color: #000; /* Set background color to white */
-      margin: 0 auto; /* Center the iframe horizontally */
-      width: 100%; /* Make iframe take full width of body */
-      height: 100%; /* Make iframe take full height of body */
-    }
- </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // This code will run only after the HTML structure is ready
-      const playButton = document.querySelector('[title="Play Video"]');
-      if (playButton) {
-        playButton.click();
-        console.log("Play button clicked via DOMContentLoaded.");
-      } else {
-        console.error("Play button not found after DOMContentLoaded.");
-      }
-    });
-  </script>
   <head>    
     <meta charset="UTF-8">
     <link id="favicon" rel="icon" href="https://firer.at/files/favicon.ico" type="image/x-icon">
     <meta name="color-scheme" content="dark">
-    <title>FireR.at's OwnCast Embed Site</title>
+    <title>FireR.at's YouTube Embed Site</title>
   </head>
-  <body id="body">
-    <iframe
-      src="https://watch.owncast.online/embed/video"
-      title="Owncast"
-      referrerpolicy="origin"
-      allowfullscreen>
-    </iframe>
+  <body id="body" style="margin: 0; overflow: hidden;">
+    <div id="player"></div> <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <script>
+      // CHANGE THIS TO CHANGE THE CURRENT VIDEO
+      let youtubevideoID = 'DBBhV5JltOM';
+      // ^^^^^^^ CHANGE THIS YOUTUBE VIDEO ID TO THE DESIRED VIDEO OR LIVE STREAM ^^^^^^^^^
+
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player) after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: window.innerHeight + 'px',
+          width: window.innerWidth + 'px',
+          videoId: youtubevideoID,
+          playerVars: {
+            'playsinline': 1
+          },
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        console.log('YouTube Player is ready!');
+        event.target.playVideo(); // Start playing the video
+        event.target.unMute(); // Unmute the video
+        event.target.setVolume(1); // Set the desired volume
+        
+        setTimeout(() => {
+              event.target.unMute(); // Unmute after autoplay starts
+              event.target.setVolume(1); // Set desired volume
+          }, 500);
+
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        // if (event.data == YT.PlayerState.PLAYING && !done) {
+        //   setTimeout(stopVideo, 6000);
+        //   done = true;
+        // }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+
+      // player.setVolume(5);
+      // player.playVideo();
+      // player.pauseVideo();
+    </script>
   </body>
 </html>
