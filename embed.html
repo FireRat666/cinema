@@ -18,6 +18,56 @@
       height: 100%; /* Make iframe take full height of body */
     }
  </style>
+  <script>
+    function clickPlayButtonWhenAdded() {
+      // First, check if it already exists when the function runs
+      const existingButton = document.querySelector('[title="Play Video"]');
+      if (existingButton) {
+        existingButton.click();
+        console.log("Play button clicked immediately (already existed).");
+        return;
+      }
+    
+      // If not found, set up an observer
+      const observer = new MutationObserver(function(mutationsList, obs) {
+        // Look through all mutations that just occurred
+        for (const mutation of mutationsList) {
+          // We only care about nodes being added
+          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+            // Check if the specific button we want is now present
+            const playButton = document.querySelector('[title="Play Video"]');
+            if (playButton) {
+              playButton.click();
+              console.log("Play button clicked via MutationObserver.");
+              obs.disconnect(); // Stop observing once we've found and clicked it
+              return; // Exit the callback function
+            }
+          }
+        }
+      });
+    
+      // Start observing the document body (or a more specific container if known)
+      // for additions/removals of direct children and descendants.
+      observer.observe(document.body, {
+        childList: true, // Watch for direct children changes
+        subtree: true    // Watch for changes in all descendants
+      });
+    
+      console.log("MutationObserver set up to wait for the play button.");
+    
+      // Optional: Add a timeout to stop observing if it never appears
+      setTimeout(() => {
+          const stillObserving = observer.takeRecords().length > 0 || document.querySelector('[title="Play Video"]') == null;
+          if(stillObserving) { // Check if it hasn't fired and disconnected itself
+              console.warn("MutationObserver timed out waiting for play button.");
+              observer.disconnect();
+          }
+      }, 15000); // Timeout after 15 seconds
+    }
+    
+    // Wait for the initial DOM structure before setting up the observer
+    document.addEventListener('DOMContentLoaded', clickPlayButtonWhenAdded);
+  </script>
   <head>    
     <meta charset="UTF-8">
     <link id="favicon" rel="icon" href="https://firer.at/files/favicon.ico" type="image/x-icon">
