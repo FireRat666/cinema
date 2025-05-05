@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <style> 
+    body {
+      margin: 0; /* Remove default body margin */
+      overflow: hidden; /* Hide scrollbars if iframe fits perfectly */
+      height: 100vh; /* Make body take full viewport height */
+    }
+    iframe {
+      border: none; /* Remove iframe border */
+      display: block; /* Ensure iframe behaves like a block element */
+      /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); Add a subtle shadow for depth */
+      /* border-radius: 10px; Rounded corners for a modern look */
+      overflow: hidden; /* Hide horizontal overflow */
+      background-color: #000; /* Set background color to white */
+      margin: 0 auto; /* Center the iframe horizontally */
+      width: 100%; /* Make iframe take full width of body */
+      height: 100%; /* Make iframe take full height of body */
+    }
+ </style>
+  <head>    
+    <meta charset="UTF-8">
+    <link id="favicon" rel="icon" href="https://firer.at/files/favicon.ico" type="image/x-icon">
+    <meta name="color-scheme" content="dark">
+    <title>FireR.at's OwnCast Embed Site</title>
+  </head>
+  <body id="body">
+    <iframe
+      src="https://watch.owncast.online/embed/video"
+      title="Owncast"
+      referrerpolicy="origin"
+      allowfullscreen>
+    </iframe>
+  </body>
+</html>
