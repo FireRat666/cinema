@@ -131,4 +131,47 @@ function enableThePortableFireScreen() {
   }
     console.log("Fire Tablet enabled");
 
-}
+};
+
+// BobCast Home Button Auto Play
+document.addEventListener('CustomButtonClick', async function(event) {
+ // console.log('--- 1 Detected a Button Click event in another script! ---');
+ // console.log('Button Name:', event.detail.buttonName);
+ // console.log('Detail:', event.detail);
+ // console.log('Message:', event.detail.message);
+ // console.log('Timestamp:', event.detail.timestamp);
+  switch (event.detail.buttonName) {
+    case 'Home':
+     // console.log('Handling action for: Primary Action Button HOME HOME');
+      if (String(event.detail.message).includes("embed/video")) {
+      // console.log('HOME IS watch.owncast.online');
+        setTimeout(async () => { 
+          (await BS.BanterScene.GetInstance().Find(`MyBrowser1`)).GetComponent(BS.ComponentType.BanterBrowser).RunActions(JSON.stringify({
+          actions: [
+            {
+              actionType: "runscript",
+              strparam1: `document.querySelector('[title="Play Video"]').click();`
+            },
+            {
+              actionType: "keypress",
+              strparam1: "f"
+            }
+          ]
+        }));
+        }, 2000);
+      } else {
+       // console.log(`HOME IS NOT watch.owncast.online`, event.detail.message);
+      };
+      break;
+    case 'Info':
+     // console.log('Handling action for: More Info Button');
+      // Do something specific for button 2
+      break;
+    case 'Google':
+     // console.log('Handling action for: Google Button');
+      // Do something specific for button 3
+      break;
+    default:
+     // console.log('An unknown button triggered the custom event.');
+  }
+});
