@@ -78,7 +78,7 @@ function enableTheFireScreen() {
 		firescreen.setAttribute("volume", "0.2");
 		firescreen.setAttribute("width", "1920");
 		firescreen.setAttribute("height", "1080");
-		firescreen.setAttribute("screen-position", "18.2029 -5.9 -1.451");
+		firescreen.setAttribute("screen-position", "18.201 -5.9 -1.451");
 		firescreen.setAttribute("website", websiteurl);
 		firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 		document.querySelector("a-scene").appendChild(firescreen);
