@@ -35,7 +35,7 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("button-position", "-18.4 1.45 -1.45");
 		videoplayer.setAttribute("volume", "5");
 		videoplayer.setAttribute("button-rotation", "0 0 0");
-		videoplayer.setAttribute("button-scale", "0.5 0.5 0.5");
+		videoplayer.setAttribute("button-scale", "0.4 0.4 0.4");
 		videoplayer.setAttribute("spatial-min-distance", "1");
 		videoplayer.setAttribute("spatial-max-distance", "1000");
 		videoplayer.setAttribute("playlist", youtubePlaylist);
