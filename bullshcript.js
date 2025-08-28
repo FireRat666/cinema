@@ -47,7 +47,7 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("data-mute-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Mute.png?v=1713028120228");
 		videoplayer.setAttribute("data-skip-forward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Forward.png?v=1713028118642");
 		videoplayer.setAttribute("data-skip-backward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Backwardsd.png?v=1713028118986");
-		videoplayer.setAttribute("src", "https://vidya.sdq.st/playlist.js"); // https://vidya.sdq.st/playlist.js
+		videoplayer.setAttribute("src", "https://vidya.firer.at/playlist.js"); // https://vidya.sdq.st/playlist.js
     document.querySelector("a-scene").appendChild(videoplayer);
   } else {console.log("YouTube Player Loading...");}
 };
