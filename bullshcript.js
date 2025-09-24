@@ -35,18 +35,18 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("button-position", "-18.4 1.45 -1.45");
 		videoplayer.setAttribute("volume", "5");
 		videoplayer.setAttribute("button-rotation", "0 0 0");
-		videoplayer.setAttribute("button-scale", "0.8 0.8 0.8");
+		videoplayer.setAttribute("button-scale", "1 1 1");
 		videoplayer.setAttribute("spatial-min-distance", "1");
 		videoplayer.setAttribute("spatial-max-distance", "1000");
 		videoplayer.setAttribute("playlist", youtubePlaylist);
 		videoplayer.setAttribute("announce", "false");
 		// videoplayer.setAttribute("announce-four-twenty", "false");
-		videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937");
-		videoplayer.setAttribute("data-vol-up-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolUp.png?v=1713028119640");
-		videoplayer.setAttribute("data-vol-down-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolDown.png?v=1713028119279");
-		videoplayer.setAttribute("data-mute-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Mute.png?v=1713028120228");
-		videoplayer.setAttribute("data-skip-forward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Forward.png?v=1713028118642");
-		videoplayer.setAttribute("data-skip-backward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Backwardsd.png?v=1713028118986");
+		// videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937");
+		// videoplayer.setAttribute("data-vol-up-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolUp.png?v=1713028119640");
+		// videoplayer.setAttribute("data-vol-down-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolDown.png?v=1713028119279");
+		// videoplayer.setAttribute("data-mute-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Mute.png?v=1713028120228");
+		// videoplayer.setAttribute("data-skip-forward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Forward.png?v=1713028118642");
+		// videoplayer.setAttribute("data-skip-backward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Backwardsd.png?v=1713028118986");
 		videoplayer.setAttribute("src", "https://vidya.firer.at/playlist.js"); // https://vidya.sdq.st/playlist.js
     document.querySelector("a-scene").appendChild(videoplayer);
   } else {console.log("YouTube Player Loading...");}
